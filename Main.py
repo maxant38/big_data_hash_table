@@ -44,8 +44,8 @@ def main(M=0, R=0, graph=0):
 
     print("la fonction hash_Jenkins est la meilleure")
 
-
-
+#--------------------------------------------------------------------------
+    TD.data_viz(Y,Z)
 
 
 if __name__ == "__main__":

@@ -2,10 +2,11 @@ import sympy
 import random
 import numpy as np
 from collections import Counter
-import matplotlib.pyplot as plt
 import Lecture_fichier
 import math
-
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 ###Create a TAD of legnth M+1###
 
 def create_TAD(M):
@@ -135,10 +136,39 @@ def hash_justin_maxence_multiplication(primeM, X_string):
 
     return hash
 
+#-------------------------------------------------------------------
+
+def data_viz_vanila():
+
+    x = [random.randrange(100) for _ in range(100)]
+    y = [random.randrange(100) for _ in range(100)]
+    df = pd.concat(axis=0, ignore_index=True, objs=[
+        pd.DataFrame.from_dict({'value': x, 'name': 'x'}),
+        pd.DataFrame.from_dict({'value': y, 'name': 'y'})
+    ])
+    fig, ax = plt.subplots()
+    sns.histplot(
+        data=df, x='value', hue='name', multiple='dodge',
+        bins=range(1, 110, 10), ax=ax
+    )
+    ax.set_xlim([0, 100])
+    plt.show()
 
 
+def data_viz(Y,Z):
 
 
+    df = pd.concat(axis=0, ignore_index=True, objs=[
+        pd.DataFrame.from_dict({'value': Y, 'name': 'Z'}),
+        pd.DataFrame.from_dict({'value': Z, 'name': 'Z'})
+    ])
+    fig, ax = plt.subplots()
+    sns.histplot(
+        data=df, x='value', hue='name', multiple='dodge',
+        bins=range(1, 786307, 78631), ax=ax
+    )
+    ax.set_xlim([0, 786307])
+    plt.show()
 
 
 
