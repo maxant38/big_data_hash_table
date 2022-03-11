@@ -20,7 +20,7 @@ def main(M=0, R=0, graph=0):
  #   maxline = Lecture_fichier.maxline()
 
 ##genere un nombre premier proche de M pour taux occupation à 30%
-    primeM = 786271
+    primeM = 786307
 ## met tous les mots dans une liste
     lst_word2 = Lecture_fichier.hashage_fichier_ascii("word2.txt")
     #print(lst_word2)

@@ -92,7 +92,7 @@ def generate_prime_number(M):
 def hashage_ascii(mot):
     list_result = []
     position = 0
-    modulo = 70769 # ce nombre a été définie précédement
+    modulo = 786307 # le M qui a été définie précédement
     base=256 # 256 valeurs possibles en ASCII
     longueur = len(mot)
     for lettre in mot:
@@ -100,7 +100,7 @@ def hashage_ascii(mot):
         position =+ 1
         list_result.append(asciiLettre*base**(longueur-position)) # on ajoute la valeur associée à la lettre dans le liste
     result = sum(list_result) # on fait la somme de l'ensemble des valeurs
-    result = result % modulo
+    result = result % modulo # Afin d'éviter des débordements
     return result
 
 #-------------------------------------------------------------------

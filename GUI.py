@@ -65,7 +65,7 @@ class Demo(QDialog):
         hlayout = QHBoxLayout()
         h2layoout = QHBoxLayout()
 
-        self.Mdiv = LabelledIntField('TAD length', 786271)
+        self.Mdiv = LabelledIntField('TAD length', 786307)
         self.Rdiv = LabelledIntField('Number of use', 235886)
         self.checkBoxA = QCheckBox("Show graph")
 
