@@ -22,7 +22,7 @@ class LabelledIntField(QWidget):
         layout.addWidget(self.label)
 
         self.lineEdit = QLineEdit(self)
-        self.lineEdit.setFixedWidth(50)
+        self.lineEdit.setFixedWidth(100)
         self.lineEdit.setValidator(QIntValidator())
         if initial_value != None:
             self.lineEdit.setText(str(initial_value))
@@ -65,8 +65,8 @@ class Demo(QDialog):
         hlayout = QHBoxLayout()
         h2layoout = QHBoxLayout()
 
-        self.Mdiv = LabelledIntField('TAD length', 400)
-        self.Rdiv = LabelledIntField('Number of use', 1000)
+        self.Mdiv = LabelledIntField('TAD length', 786271)
+        self.Rdiv = LabelledIntField('Number of use', 235886)
         self.checkBoxA = QCheckBox("Show graph")
 
 
@@ -97,7 +97,7 @@ class Demo(QDialog):
         print(self.Rdiv.getValue())
         print(self.checkBoxA.checkState())
         Main.main(self.Mdiv.getValue(), self.Rdiv.getValue(), self.checkBoxA.checkState())
-    #--------------------------------------------------------------------
+
 #--------------------------------------------------------------------
     def buttonCloseAction(self):
         self.close()
