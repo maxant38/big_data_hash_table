@@ -21,27 +21,32 @@ Programs to execute :
 
 ## What's in the github repository:
 
-The project is divided in four main components: the main program to launch the project,functions related to file processing, the main functions used (hash,evaluation), the  and the front-end interface.
+The project is divided in four main components: the main program to launch the project,functions related to file processing, the main functions used (hash,evaluation,...), the  and the front-end interface.
 
-### The Main Program 
+### Main Program 
 File : [Main.py](https://github.com/maxant38/big_data_hash_table/blob/main/Main.py)
 
 The Main Program is responsible for:
 
 -	Gather the different components of the project. This is the program to run if you want to use the project.
 
-### Function related to file processing 
+### Functions related to file processing 
 File : [Lecture_fichier.py](https://github.com/maxant38/big_data_hash_table/blob/main/Lecture_fichier.py)
 
 This component is responsible for:
 
--	
-### The Main Program 
-File : [Main.py](https://github.com/maxant38/big_data_hash_table/blob/main/Main.py)
+- Determine which txt file contains the most words (maxline function)
 
-The Main Program is responsible for:
+- Determine the size M of our hash table
 
--	Gather the different components of the project. This is the program to run if you want to use the project.
+- Proceed to the hash of a file (hashage_fichier_% functions)
+
+### Front-end interface
+File : [GUI.py](https://github.com/maxant38/big_data_hash_table/blob/main/GUI.py)
+
+This component is responsible for:
+
+- Creating a font-end interface for the user
 
 ## Built With:
 
