@@ -49,6 +49,7 @@ This component is responsible for:
 
 - Create a TAD and fill it (create_TAD, put_in_TAD)
 
+- A visualization of the data to see if our functions are uniforms (data_viz)
 ### Front-end interface
 File : [GUI.py](https://github.com/maxant38/big_data_hash_table/blob/main/GUI.py)
 
