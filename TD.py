@@ -138,6 +138,7 @@ def hash_justin_maxence_multiplication(primeM, X_string):
     return hash
 
 #-------------------------------------------------------------------
+# A visualization of the data to see if our functions are uniforms
 
 def data_viz(X,Y,Z,W):
 
@@ -147,21 +148,27 @@ def data_viz(X,Y,Z,W):
     W_sample = [[],[]]
 
 # Nous prenons seulement des échantillons aléatoire des valeurs car sinon la visualisation prend trop de temps
+    
+    borneMoins = 150000 # Choisir l'intervalle sur lequel vous voulez la visualisation
+    bornePlus = 152000  # Si vous prenez des intervalles > 10 000 le programme risque de planter
+
+# Creation des échantillons
+
     i=0
-    for i in range (0,10500):
+    for i in range (borneMoins,bornePlus):
         X_sample[0].append(i)
         i =+ 1
         X_sample[1].append(X[i])
 
     i=0
-    for i in range (0,10500):
+    for i in range (borneMoins,bornePlus):
         Y_sample[0].append(i)
         i =+ 1
         Y_sample[1].append(Y[i])
 
 
     i=0
-    for i in range (0,10500):
+    for i in range (borneMoins,bornePlus):
         Z_sample[0].append(i)
         i =+ 1
         Z_sample[1].append(Z[i])
@@ -169,16 +176,14 @@ def data_viz(X,Y,Z,W):
 
 
     i=0
-    for i in range (0,10500):
+    for i in range (borneMoins,bornePlus):
         W_sample[0].append(i)
         i =+ 1
         W_sample[1].append(W[i])
 
 
-
-
     
-    fig, ax = plt.subplots(4)
+    fig, ax = plt.subplots(4) # On crée quatre figures pour les quatres histogrammes
 
     plt.suptitle('Comparaison de nos fonctions de hashages',fontsize=14, fontweight='bold')
     plt.ylabel("Nombre d'occurence", loc="center")
@@ -195,7 +200,6 @@ def data_viz(X,Y,Z,W):
     ax[2].legend(loc="upper left")
 
     ax[3].bar(W_sample[0], W_sample[1], color="black", label="Hashage Multiplication")
-    
     ax[3].legend(loc="upper left")
     
     plt.show()
