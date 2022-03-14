@@ -155,19 +155,21 @@ def data_viz_vanila():
     plt.show()
 
 
-def data_viz(Y,Z):
+def data_viz(Y,Z,W):
 
 
     df = pd.concat(axis=0, ignore_index=True, objs=[
-        pd.DataFrame.from_dict({'value': Y, 'name': 'Z'}),
-        pd.DataFrame.from_dict({'value': Z, 'name': 'Z'})
+        pd.DataFrame.from_dict({'value': Y, 'name': 'Y'}),
+        pd.DataFrame.from_dict({'value': Z, 'name': 'Z'}),
+        pd.DataFrame.from_dict({'value': W, 'name': 'W'})
     ])
-    fig, ax = plt.subplots()
+    ax = plt.subplots()
     sns.histplot(
-        data=df, x='value', hue='name', multiple='dodge',
-        bins=range(1, 786307, 78631), ax=ax
+        data=df, x='value', hue='name', multiple='dodge'
     )
-    ax.set_xlim([0, 786307])
+    print(df)
+
+    #ax.set_xlim([0, 786307])
     plt.show()
 
 
