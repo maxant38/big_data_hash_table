@@ -41,6 +41,14 @@ This component is responsible for:
 
 - Proceed to the hash of a file (hashage_fichier_% functions)
 
+### Functions Main function used
+
+- Define hash functions(Jenkins,Multiplication, ASCII and use_hash)
+
+- Generate a prime number close to the searched one (generate_prime_number)
+
+- Create a TAD and fill it (create_TAD, put_in_TAD)
+
 ### Front-end interface
 File : [GUI.py](https://github.com/maxant38/big_data_hash_table/blob/main/GUI.py)
 
