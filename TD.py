@@ -141,46 +141,61 @@ def hash_justin_maxence_multiplication(primeM, X_string):
 
 def data_viz(X,Y,Z,W):
 
-    X_sample = []
-    Y_sample = []
-    Z_sample = []
-    W_sample = []
+    X_sample = [[],[]]
+    Y_sample = [[],[]]
+    Z_sample = [[],[]]
+    W_sample = [[],[]]
 
 # Nous prenons seulement des échantillons aléatoire des valeurs car sinon la visualisation prend trop de temps
+    i=0
+    for i in range (0,10500):
+        X_sample[0].append(i)
+        i =+ 1
+        X_sample[1].append(X[i])
 
-    for i in range (0,300):
-        X_sample.append((np.random.choice(X)))
+    i=0
+    for i in range (0,10500):
+        Y_sample[0].append(i)
+        i =+ 1
+        Y_sample[1].append(Y[i])
 
-    for i in range (0,300):
-        print((np.random.choice(Y)))
-        Y_sample.append((np.random.choice(Y)))
+
+    i=0
+    for i in range (0,10500):
+        Z_sample[0].append(i)
+        i =+ 1
+        Z_sample[1].append(Z[i])
+
+
+
+    i=0
+    for i in range (0,10500):
+        W_sample[0].append(i)
+        i =+ 1
+        W_sample[1].append(W[i])
+
+
+
+
     
-    for i in range (0,300):
-        Z_sample.append((np.random.choice(Z)))
-    
-    for i in range (0,300):
-        W_sample.append((np.random.choice(W)))
-
-    print(Y)
-    print(Y_sample)
     fig, ax = plt.subplots(4)
 
     plt.suptitle('Comparaison de nos fonctions de hashages',fontsize=14, fontweight='bold')
     plt.ylabel("Nombre d'occurence", loc="center")
     plt.xlabel("Valeur")
-    
-    print(np.array([1]*len(X_sample)))
+ 
 
-    ax[0].bar(X_sample, np.array([1]*len(X_sample)),color="blue", label="Test TAD")
+    ax[0].bar(X_sample[0], X_sample[1],color="blue", label="Test TAD")
     ax[0].legend(loc="upper left")
 
-    ax[1].bar(Y_sample, np.array([1]*len(Y_sample)),color="red", label="Hashage ASCII")
+    ax[1].bar(Y_sample[0], Y_sample[1],color="red", label="Hashage ASCII")
     ax[1].legend(loc="upper left")
 
-    ax[2].bar(Z_sample, np.array([1]*len(Z_sample)),color="green", label="Hashage Jenkins")
+    ax[2].bar(Z_sample[0], Z_sample[1],color="green", label="Hashage Jenkins")
     ax[2].legend(loc="upper left")
 
-    ax[3].bar(W_sample,np.array([1]*len(W_sample)), color="black", label="Hashage Multiplication")
+    ax[3].bar(W_sample[0], W_sample[1], color="black", label="Hashage Multiplication")
+    
     ax[3].legend(loc="upper left")
     
     plt.show()
