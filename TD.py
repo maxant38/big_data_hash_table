@@ -1,3 +1,4 @@
+from enum import auto
 import sympy
 import random
 import numpy as np
@@ -138,43 +139,50 @@ def hash_justin_maxence_multiplication(primeM, X_string):
 
 #-------------------------------------------------------------------
 
-def data_viz_vanila():
+def data_viz(X,Y,Z,W):
 
-    x = [random.randrange(100) for _ in range(100)]
-    y = [random.randrange(100) for _ in range(100)]
-    df = pd.concat(axis=0, ignore_index=True, objs=[
-        pd.DataFrame.from_dict({'value': x, 'name': 'x'}),
-        pd.DataFrame.from_dict({'value': y, 'name': 'y'})
-    ])
-    fig, ax = plt.subplots()
-    sns.histplot(
-        data=df, x='value', hue='name', multiple='dodge',
-        bins=range(1, 110, 10), ax=ax
-    )
-    ax.set_xlim([0, 100])
+    X_sample = []
+    Y_sample = []
+    Z_sample = []
+    W_sample = []
+
+# Nous prenons seulement des échantillons aléatoire des valeurs car sinon la visualisation prend trop de temps
+
+    for i in range (0,300):
+        X_sample.append((np.random.choice(X)))
+
+    for i in range (0,300):
+        print((np.random.choice(Y)))
+        Y_sample.append((np.random.choice(Y)))
+    
+    for i in range (0,300):
+        Z_sample.append((np.random.choice(Z)))
+    
+    for i in range (0,300):
+        W_sample.append((np.random.choice(W)))
+
+    print(Y)
+    print(Y_sample)
+    fig, ax = plt.subplots(4)
+
+    plt.suptitle('Comparaison de nos fonctions de hashages',fontsize=14, fontweight='bold')
+    plt.ylabel("Nombre d'occurence", loc="center")
+    plt.xlabel("Valeur")
+    
+    print(np.array([1]*len(X_sample)))
+
+    ax[0].bar(X_sample, np.array([1]*len(X_sample)),color="blue", label="Test TAD")
+    ax[0].legend(loc="upper left")
+
+    ax[1].bar(Y_sample, np.array([1]*len(Y_sample)),color="red", label="Hashage ASCII")
+    ax[1].legend(loc="upper left")
+
+    ax[2].bar(Z_sample, np.array([1]*len(Z_sample)),color="green", label="Hashage Jenkins")
+    ax[2].legend(loc="upper left")
+
+    ax[3].bar(W_sample,np.array([1]*len(W_sample)), color="black", label="Hashage Multiplication")
+    ax[3].legend(loc="upper left")
+    
     plt.show()
 
-
-def data_viz(Y,Z,W):
-
-
-    df = pd.concat(axis=0, ignore_index=True, objs=[
-        pd.DataFrame.from_dict({'value': Y, 'name': 'Y'}),
-        pd.DataFrame.from_dict({'value': Z, 'name': 'Z'}),
-        pd.DataFrame.from_dict({'value': W, 'name': 'W'})
-    ])
-    ax = plt.subplots()
-    sns.histplot(
-        data=df, x='value', hue='name', multiple='dodge'
-    )
-    print(df)
-
-    #ax.set_xlim([0, 786307])
-    plt.show()
-
-
-
-
-
-
-
+#-------------------------------------------------------------------
