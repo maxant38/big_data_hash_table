@@ -1,7 +1,7 @@
-# big_data_hash_table
+# Internal data structures
 
 <!-- ABOUT THE PROJECT -->
-# About The Project
+## About The Project
 
 This project is a practical work of the Big Data course of the EMSE.
 
