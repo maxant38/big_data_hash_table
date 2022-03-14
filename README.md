@@ -58,7 +58,7 @@ This component is responsible for:
 
 ## Built With:
 
-* [Python](https://www.python.org/), [Libraties used](https://github.com/maxant38/big_data_hash_table/tree/main/.venv/Lib/site-packages)
+* [Python](https://www.python.org/), [Libraries used](https://github.com/maxant38/big_data_hash_table/tree/main/.venv/Lib/site-packages)
 => To make your life easier, download the .venv file which will allow you to have an environment with all the libraries used in this project. 
 
 
