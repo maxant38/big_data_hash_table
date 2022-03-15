@@ -29,7 +29,7 @@ def hashage_fichier_ascii(fichier):
     f = open(fichier,'r')
     mots = f.readlines()
     for i in range (0,len(mots)):
-        mots[i] = mots[i][:-1]
+        mots[i] = mots[i][:-1] # on enlève les caractères parasite (saut de ligne)
         lst_fichier_hashe.append(TD.hashage_ascii(mots[i]))
     return lst_fichier_hashe
 
