@@ -18,6 +18,7 @@ Implement  hash functions and compare them on two criteria: the number of collis
 
 Programs to execute : 
 - [Main.py](https://github.com/maxant38/big_data_hash_table/blob/main/Main.py)
+- launch the main function
 
 ## What's in the github repository:
 
@@ -28,8 +29,8 @@ File : [Main.py](https://github.com/maxant38/big_data_hash_table/blob/main/Main.
 
 The Main Program is responsible for:
 
--	Gather the different components of the project. This is the program to run if you want to use the project.
-
+- Gather the different components of the project. This is the program to run if you want to use the project.
+- Call the UI 
 ### Functions related to file processing 
 File : [Lecture_fichier.py](https://github.com/maxant38/big_data_hash_table/blob/main/Lecture_fichier.py)
 
@@ -57,6 +58,8 @@ File : [GUI.py](https://github.com/maxant38/big_data_hash_table/blob/main/GUI.py
 This component is responsible for:
 
 - Creating a font-end interface for the user
+- Create a TAD according custom user input
+- Tell the program to display more information (graph, data visualization)
 
 ## Built With:
 

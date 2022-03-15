@@ -65,14 +65,17 @@ class Demo(QDialog):
         hlayout = QHBoxLayout()
         h2layoout = QHBoxLayout()
 
+        #la longueur correspond à celle de notre table, et le number of use au nombre de mots
         self.Mdiv = LabelledIntField('TAD length', 786307)
         self.Rdiv = LabelledIntField('Number of use', 235886)
-        self.checkBoxA = QCheckBox("Show graph")
+        self.checkBoxA = QCheckBox("TAD Graph")
+        self.checkBoxB = QCheckBox("visualize data")
 
 
         hlayout.addWidget(self.Mdiv)
         hlayout.addWidget(self.Rdiv)
         h2layoout.addWidget(self.checkBoxA)
+        h2layoout.addWidget(self.checkBoxB)
         hlayout.addStretch()
         h2layoout.addStretch()
         parentLayout.addLayout(hlayout)
@@ -90,15 +93,16 @@ class Demo(QDialog):
         parentLayout.addLayout(hlayout)
     #--------------------------------------------------------------------
 
-
+    #renvoie les valeurs d'inputs et des cases cochées en main
     def buttonOkAction(self):
         plt.close()
         print(self.Mdiv.getValue())
         print(self.Rdiv.getValue())
         print(self.checkBoxA.checkState())
-        Main.main(self.Mdiv.getValue(), self.Rdiv.getValue(), self.checkBoxA.checkState())
+        Main.main(self.Mdiv.getValue(), self.Rdiv.getValue(), self.checkBoxA.checkState(), self.checkBoxB.checkState())
 
 #--------------------------------------------------------------------
+    #quitte le programme
     def buttonCloseAction(self):
         self.close()
         sys.exit()

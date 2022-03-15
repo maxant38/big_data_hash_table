@@ -15,7 +15,7 @@ def maxline():
     print(maxLine)
 #--------------------------------------------------------------------------
 # On obtient le résultat suivant : 235886
-# On constate que le fichier qui contient le maximum de mots en contient 235 886. Sachant que l'on souhaite que la table de hachage soit occupée à environ 30% de sa capacité. 
+# On constate que le fichier qui contient le maximum de mots en contient 235 886. Sachant que l'on souhaite que la table de hachage soit occupée à environ 30% de sa capacité.
 # On va prendre une valeur proche de 235886/0.3=~ 786 287 .
 # Afin d'avoir une fonction de hachage avec une bonne dispersion.Nous allons prendre un nombre premier proche de cette valeur.
 # Nous avons donc grâce à la fonction generate_prime_number (contenue dans le fichier TD.py) déterminer le nombre premier que nous allons utilisé.
@@ -42,6 +42,8 @@ def hashage_fichier_Jenkins(fichier):
         lst_fichier_hashe.append(TD.hash_justin_maxence_Jenkins(786307, mots[i]))
     return lst_fichier_hashe
 
+#Hash le fichier selon la méthode de Jenkins vue en cours
+
 def hashage_fichier_multiplication(fichier):
     lst_fichier_hashe=[]
     f = open(fichier,'r')
@@ -51,3 +53,4 @@ def hashage_fichier_multiplication(fichier):
         lst_fichier_hashe.append(TD.hash_justin_maxence_multiplication(786307, mots[i]))
     return lst_fichier_hashe
 
+#hash le fichier selon la multiplication suggérée en cours
