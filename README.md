@@ -12,7 +12,7 @@ This project is a practical work of the Big Data course of the EMSE.
 
 ## Objective:
 
-Implement  hash functions and compare them on two criteria: the number of collisions and the good distribution. the number of collisions and a good distribution in the hash space.
+Implement  hash functions and compare them on two criteria: the number of collisions and the good distribution. 
 
 ## Use the project
 
