@@ -22,7 +22,7 @@ Programs to execute :
 
 ## What's in the github repository:
 
-The project is divided in four main components: the main program to launch the project,functions related to file processing, the main functions used (hash,evaluation,...), the  and the front-end interface.
+The project is divided in four main components: the main program to launch the project,functions related to file processing, the main functions used (hash,evaluation,...), and the front-end interface.
 
 ### Main Program 
 File : [Main.py](https://github.com/maxant38/big_data_hash_table/blob/main/Main.py)
